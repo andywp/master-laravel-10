@@ -3,8 +3,8 @@
         ***********************************-->
  <div class="nav-header">
      <a href="{{ url('/') }}" class="brand-logo" target="_blank">
-            <img class="logo-abbr" src="{{ asset('images/app.png') }}" alt="rasalogi APP" >
-            <div class="brand-title"><h2 class="font-weight-bold fs-3" style="color:#fff;" >Rasalogi</h2></div>
+            <img class="logo-abbr" src="{{ asset('images/logo-kemenlu.png') }}" alt="rasalogi APP" >
+            <div class="brand-title"><h2 class="font-weight-bold fs-3" style="color:#fff;" >KEMLU</h2></div>
      </a>
      <div class="nav-control">
          <div class="hamburger">

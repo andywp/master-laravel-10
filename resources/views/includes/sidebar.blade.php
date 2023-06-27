@@ -40,45 +40,6 @@
                     <span class="nav-text">Dashboard</span>
                 </a>
             </li>
-            
-            <li>
-                <a class="has-arrow " href="javascript:void()" aria-expanded="false">
-                    <i class="flaticon-381-file-2"></i>
-                    <span class="nav-text">Manage Pages</span>
-                </a>
-                <ul aria-expanded="false">
-                    <li><a href="#">Visi & Misi</a></li>
-                    
-                </ul>
-            </li>
-            <li>
-                <a class="has-arrow " href="javascript:void()" aria-expanded="false">
-                    <i class="flaticon-381-presentation"></i>
-                    <span class="nav-text">Info Desa</span>
-                </a>
-                <ul aria-expanded="false">
-                    <li><a href="{{ route('admin.desa.index') }}">Identitas Desa</a></li>
-                    <li><a href="{{ route('admin.desa.petadesa') }}">Peta Desa</a></li>
-                    <li>
-                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">Wilayah Administratif</a>
-                        <ul aria-expanded="false">
-                            <li><a href="{{ route('admin.desa.rw') }}">Data RW</a></li>
-                            <li><a href="./email-inbox.html">Data RT / Dukuh</a></li>
-                        </ul>
-                    </li>
-                   
-                </ul>
-            </li>
-            <li>
-                <a class="has-arrow " href="javascript:void()" aria-expanded="false">
-                    <i class="flaticon-381-edit"></i>
-                    <span class="nav-text">Posts</span>
-                </a>
-                <ul aria-expanded="false">
-                    <li><a href="{{ route('admin.posts.index') }}">Manage Post</a></li>
-                    <li><a href="{{ route('admin.category.index') }}">Category</a></li>
-                </ul>
-            </li>
             <li>
                 <a class="has-arrow " href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-381-picture-2"></i>
@@ -87,21 +48,12 @@
                 <ul aria-expanded="false">
                     <li><a href="{{ route('admin.gallery.index') }}">Images</a></li>
                     <li><a href="{{ route('admin.video.index') }}">Video</a></li>
+                    
                 </ul>
             </li>
-            <li><a href="{{ route('admin.slider.index') }}" class="" aria-expanded="false">
-                    <i class="flaticon-381-next-1"></i>
-                    <span class="nav-text">Slider</span>
-                </a>
-            </li>
-            <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
-                    <i class="flaticon-381-settings-6"></i>
-                    <span class="nav-text">Setting</span>
-                </a>
-                <ul aria-expanded="false">
-                    <li><a href="{{ route('admin.user.index') }}">Manage User</a></li>
-                </ul>   
-            </li>
+            
+            
+           
             
 
            
@@ -110,7 +62,7 @@
        
         
         <div class="copyright">
-            <p><strong>Sistem Informasi Desa</strong> © {{ date('Y') }} All Rights Reserved</p>
+            <p><strong>Kemlu</strong> © {{ date('Y') }} All Rights Reserved</p>
             <p class="fs-12 d-none">Made with <span class="heart"></span> by <a href="https://rasalogi.com/" target="_blank">Rasalogi {{ date('Y') }}</a></p>
         </div>
     </div>
