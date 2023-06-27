@@ -19,10 +19,14 @@
 		}
     }
 	a{
-		color:$white!important;
+		color:$white;
 	}
 	.btn-link g [fill]{
 		fill: #fff;
+	}
+	.swal2-popup #swal2-content {
+		
+		color: #fff;
 	}
 	.btn-light:active, 
 	.btn-light:focus, 
@@ -30,8 +34,8 @@
 		color:#000;
 	}
 	.form-control {
-        background-color:#2E2E40;
-        border-color: $d-border;
+        background-color:$d-bg;
+        border-color: $d-border!important;
         color: $white;
     }
 	.modal-content{
@@ -40,6 +44,14 @@
 	.modal-footer,
 	.modal-header{
 		border-color: $d-border;
+	}
+	.dashboard-select-2,
+	.menu-tabs{
+		border-color:$d-border!important;
+	
+	}
+	.dd-handle.move-media + .accordion-button{
+		background-color:$d-bg;
 	}
 	.close{
 	    font-weight: 400;
@@ -129,7 +141,7 @@
         }
 	}
 	.list-group-item-action{
-		color:$body-color;
+		color:$border;
 	}
 	.list-group-item-action:focus, 
 	.list-group-item-action:hover, 
@@ -196,15 +208,16 @@
 	}
 	.compose-content .dropzone{
 		background:$d-bg!important;
+		border-color:$d-border;
 		.dlab-message .dlab-button{
 			color:$white;
 		}
 	}
 	.daterangepicker{
 		background:$d-bg;
-		border-color:var(--primary);
+		border-color:$d-border;
 		.calendar-table{
-			border-color:var(--primary);
+			border-color:$d-border;
 			background:$d-bg;
 			.table-condensed{
 				td{
@@ -218,6 +231,9 @@
         &:after{
             border-bottom: 0.375rem solid $d-bg;
         }
+	}
+	.daterangepicker .drp-buttons{
+		border-color:$d-border;
 	}
     
     .daterangepicker select.hourselect
@@ -404,9 +420,9 @@
 			background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
 		}
 	}
-	.paging_simple_numbers.dataTables_paginate{
+	/* .paging_simple_numbers.dataTables_paginate{
 		background:$d-bg;
-	}
+	} */
 	.dataTables_info{
 		color:$white;	
 	}
@@ -507,9 +523,9 @@
 	.separate-row > div{
 		border-color:$d-border;	
 	}
-	.bg-white{
+	/* .bg-white{
 		background:#2E2E40!important;	
-	}
+	} */
 	.dlabnav .header-info2 span{
 		color:$white;	
 	}
@@ -585,4 +601,106 @@
 	.jobs{
 		border-color:$d-border;	
 	}
+	.search-job .job-title-search .search-area .input-group-text{
+		background-color:$d-bg;
+	}
+	.default-select.style-1{
+		background-color:transparent;
+	}
+	.copyright strong{
+		color:$white;
+	}
+	.recent-activity:after{
+		background-color:$d-border;
+	}
+	.activity{
+		svg{
+			path{
+				fill:$d-bg;
+			}
+		}
+	}
+	.coin-tabs .nav-tabs .nav-item .nav-link{
+		color:var(--primary);
+		&:hover{
+			color:var(--primary)!important;
+		}
+	}
+	.custom-label,
+	.custom-label-2,
+	.exp-del i, .exp-del strong{
+		color:$white;
+	}
+	.listline-wrapper .item:not(:last-child){
+		border-color:$d-border;
+	}
+	.attachment{
+		a{
+			color:var(--primary);
+			&:hover{
+				color:$white;
+			}
+		}
+	}
+	.table-bordered > :not(caption) > *{
+		border-color:$d-border;
+	}
+	.read-content-attachment .attachment > div:not(:last-child){
+		border-color:$d-border;
+	}
+	.bg-img-fix{
+		.bg-white{
+			background-color:$d-bg!important;
+		}
+	}
+	.datepicker.datepicker-dropdown.dropdown-menu.datepicker-orient-left.datepicker-orient-bottom{
+		border-color:$d-border;
+	}
+	.text-youtube,
+	.text-linkedin,
+	.text-facebook,
+	.text-dribble{
+	
+	
+		&:after{
+			background-color: $d-border;
+		
+		}
+	}
+	.cm-content-box .cm-content-body{
+		background-color:$dark-card;
+	}
+	.tab-my{
+		.nav-link{
+			background-color: transparent;
+			border: 1px solid rgba(255, 255, 255, 0.1);
+			color: #fff;
+			&.active{
+				background-color: var(--primary) !important;
+
+			}
+		}
+	}
+	.dd .accordion-body,
+	.dz-terms{
+		border-color:$d-border;
+	}
+	.dlabnav .header-profile2 .sidebar-info i{
+		color:$white!important;
+	}
+	.new-scroll{
+		background-color:$d-bg;
+	}
+	.cm-content-box{
+		background-color:$dark-card;
+		.content-title{
+			border-color:$d-border;
+			
+		}
+	}
+	.cm-content-box.box-primary.style-1 .content-title{
+		border-color:$d-border;
+	}
+	
+	
 }

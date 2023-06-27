@@ -13,12 +13,15 @@
   
   .legendColorBox > div {
     border: 0 !important;
-    padding: 0 !important; }
+    padding: 0 !important;
+}
   
   .legendLabel {
     font-size: 0.825rem;
-    padding-left: .5rem; 
-    color: $white;
+    padding-left: .5rem;
+	@at-root [data-theme-version="dark"] & {	
+		color: $white;
+	}
   }
     
 .flotTip {

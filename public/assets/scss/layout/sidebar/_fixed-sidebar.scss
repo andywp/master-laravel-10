@@ -306,10 +306,14 @@
 	}
 	.type_msg{
 		.form-control{
-			padding: 0.625rem 0;
+			padding: 0.625rem 0.5rem;
 			height: 3.125rem;
+			line-height:1.8rem;
 			border: 0;
 			resize: none;
+			@at-root [data-theme-version="dark"] & {
+				background: $dark-card;
+			}						
 			&:focus{
 				z-index:0;
 			}

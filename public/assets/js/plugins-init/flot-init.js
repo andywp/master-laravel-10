@@ -24,14 +24,14 @@
 			yaxis: {
 				tickColor: 'transparent',
 				font: {
-					color: '#fff',
+					color: '#7e7e7e',
 					size: 10
 				}
 			},
 			xaxis: {
 				tickColor: 'transparent',
 				font: {
-					color: '#fff',
+					color: '#7e7e7e',
 					size: 10
 				}
 			}
@@ -62,14 +62,14 @@
 			yaxis: {
 				tickColor: 'transparent',
 				font: {
-					color: '#fff',
+					color: '#7e7e7e',
 					size: 10
 				}
 			},
 			xaxis: {
 				tickColor: 'transparent',
 				font: {
-					color: '#fff',
+					color: '#7e7e7e',
 					size: 10
 				}
 			}
@@ -121,14 +121,14 @@
 				color: 'transparent',
 				font: {
 					size: 10,
-					color: '#999'
+					color: '#7e7e7e'
 				}
 			},
 			xaxis: {
 				color: 'transparent',
 				font: {
 					size: 10,
-					color: '#999'
+					color: '#7e7e7e'
 				}
 			}
 		});
@@ -184,14 +184,14 @@
 				color: 'transparent',
 				font: {
 					size: 10,
-					color: '#fff'
+					color: '#7e7e7e'
 				}
 			},
 			xaxis: {
 				color: 'transparent',
 				font: {
 					size: 10,
-					color: '#fff'
+					color: '#7e7e7e'
 				}
 			}
 		});		
@@ -242,14 +242,14 @@
 				color: 'transparent',
 				font: {
 					size: 10,
-					color: '#fff'
+					color: '#7e7e7e'
 				}
 			},
 			xaxis: {
 				color: 'transparent',
 				font: {
 					size: 10,
-					color: '#fff'
+					color: '#7e7e7e'
 				}
 			}
 		});
@@ -301,14 +301,14 @@
 				color: 'transparent',
 				font: {
 					size: 10,
-					color: '#fff'
+					color: '#7e7e7e'
 				}
 			},
 			xaxis: {
 				color: 'transparent',
 				font: {
 					size: 10,
-					color: '#fff'
+					color: '#7e7e7e'
 				}
 			}
 		});
@@ -364,14 +364,14 @@
 				color: 'transparent',
 				font: {
 					size: 10,
-					color: '#fff'
+					color: '#7e7e7e'
 				}
 			},
 			xaxis: {
 				color: 'transparent',
 				font: {
 					size: 10,
-					color: '#fff'
+					color: '#7e7e7e'
 				}
 			}
 		});
@@ -463,7 +463,7 @@
 				color: 'transparent',
 				font: {
 					size: 10,
-					color: '#fff'
+					color: '#7e7e7e'
 				}
 			},
 			yaxis: {
@@ -472,7 +472,7 @@
 				color: 'transparent',
 				font: {
 					size: 10,
-					color: '#fff'
+					color: '#7e7e7e'
 				}
 			}
 		});
@@ -529,7 +529,7 @@
 				color: 'transparent',
 				font: {
 					size: 10,
-					color: '#fff'
+					color: '#7e7e7e'
 				}
 			},
 			yaxis: {
@@ -538,7 +538,7 @@
 				color: 'transparent',
 				font: {
 					size: 10,
-					color: '#fff'
+					color: '#7e7e7e'
 				}
 			}
 		});

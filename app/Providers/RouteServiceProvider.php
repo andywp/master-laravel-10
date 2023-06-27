@@ -36,7 +36,7 @@ class RouteServiceProvider extends ServiceProvider
             Route::middleware('web')
                 ->group(base_path('routes/web.php'));
 
-            Route::prefix('penel-admin')
+            Route::prefix('panel-admin')
                 ->middleware('web')
                 ->as('admin.')
                 ->namespace($this->namespace)

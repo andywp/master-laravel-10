@@ -78,7 +78,7 @@
 				margin-top: 1.25rem;
 			}
 			.header-info2{
-				padding:0;	
+				//padding:0;	
 			}
 			.sidebar-info{
 				display:none!important;	
@@ -169,7 +169,7 @@
 		margin-bottom:0;
 	}
 	.nav-header {
-		width: 21.75rem;
+		width: var(--width);
 		.brand-logo {
 			padding-left: 2.5rem;
 			padding-right: 2.5rem;
@@ -207,6 +207,13 @@
             &>li {
 				&>a{
 					padding:1.2rem 0.5rem;
+					
+					.badge-xs{
+						&.style-1{
+							margin-left:0px;
+							//margin-top:5px;
+						}
+					}
 				}
                 &>a.has-arrow::after {
                     top: 0.0625rem;
@@ -230,3 +237,14 @@
 
     }
 }
+[data-sidebar-style="compact"][data-container="wide-boxed"][data-layout="horizontal"],
+ [data-sidebar-style="compact"][data-container="boxed"][data-layout="horizontal"] {
+		.dlabnav{
+			.badge{
+				position: absolute;
+				right: -3px;
+				top: 1px;
+			}
+		}
+	 
+	 }

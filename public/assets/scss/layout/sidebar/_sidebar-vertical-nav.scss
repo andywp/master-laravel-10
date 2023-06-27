@@ -34,17 +34,22 @@
 		border-bottom-right-radius: 0;
     }
 }
-[data-sidebar-style="icon-hover"][data-layout="vertical"][data-container="wide-boxed"],
-[data-sidebar-style="icon-hover"][data-layout="vertical"][data-container="boxed"],
-[data-header-position="fixed"][data-sidebar-position="fixed"][data-sidebar-style="icon-hover"][data-layout="vertical"][data-container="wide-boxed"],
-[data-header-position="fixed"][data-sidebar-position="fixed"][data-sidebar-style="icon-hover"][data-layout="vertical"][data-container="boxed"],
-[data-sidebar-style="overlay"][data-layout="vertical"][data-container="wide-boxed"],
-[data-sidebar-style="overlay"][data-layout="vertical"][data-container="boxed"],
-[data-header-position="fixed"][data-sidebar-position="fixed"][data-sidebar-style="overlay"][data-layout="vertical"][data-container="wide-boxed"],
 [data-header-position="fixed"][data-sidebar-position="fixed"][data-sidebar-style="overlay"][data-layout="vertical"][data-container="boxed"] {
-    .dlabnav {
-        position: absolute;
+    
+	.dlabnav {
+        position: fixed;
+		
     }
+	.menu-toggle{
+		.dlabnav {
+			position: fixed;
+			z-index: 99999;
+			height: calc(100% - 80px);
+			left: calc(calc(100% - 1199px) / 2);
+			box-shadow: 20px 20px 20px 0 rgba(0, 0, 0, 0.1);
+		}
+	}
 }
+
 
 

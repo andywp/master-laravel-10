@@ -34,7 +34,7 @@
 			z-index:1;
             padding: 0.55rem 1rem;
             font-size: 1rem;
-            background: rgba(255, 255, 255, 0.15);
+			background-color:$white;
             color: $dark;
             // line-height: 2.375rem;
             border: 0.0625rem solid $border;
@@ -253,10 +253,10 @@
             }
 			&.page-indicator{
 				.page-link{
-					width: 5rem;
-					border: 1px solid var(--primary);
+					width: 2.5rem;
+					border: 1px solid var(--rgba-primary-1);
 					border-radius: 22px!important;
-					line-height: 1.3rem;
+					line-height: 1.2rem;
 					height: 2.5rem;	
 					background:var(--rgba-primary-1);
 					color:var(--primary);
@@ -294,7 +294,7 @@
                 padding: 0;
                 width: 1.875rem;
                 height: 1.875rem;
-                line-height: 1.875rem;
+                line-height: 1.775rem;
                 font-size: 0.875rem;
             }
         }
@@ -312,7 +312,7 @@
                 padding: 0;
                 width: 1.5625rem;
                 height: 1.5625rem;
-                line-height: 1.5625rem;
+                line-height: 1.4625rem;
                 font-size: 0.75rem;
             }
         }

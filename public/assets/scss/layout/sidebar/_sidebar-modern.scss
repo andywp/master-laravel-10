@@ -200,6 +200,13 @@
                             right: 105%;
                         }
                     }
+					.mm-collapse{
+						li{
+							a{
+								padding: 0.625rem 1rem;
+							}
+						}
+					}
 
                     &:hover {
                         &>ul {
@@ -261,10 +268,10 @@
 
     [data-sidebar-style="modern"][data-layout="horizontal"] {
 		.nav-header {
-			width: 21.75rem;
+			width: var(--width);
 		}
 		.header {
-			padding-left: 21.75rem;
+			padding-left: var(--width);
 		}
 		.footer,
 		.content-body {
@@ -301,3 +308,14 @@
         }
     }
 }
+[data-sidebar-style="modern"][data-container="wide-boxed"][data-layout="horizontal"],
+[data-sidebar-style="modern"][data-container="boxed"][data-layout="horizontal"] {
+	.dlabnav{
+		.badge{
+			position: absolute;
+			right: -3px;
+			top: 1px;
+		}
+	}
+ 
+ }

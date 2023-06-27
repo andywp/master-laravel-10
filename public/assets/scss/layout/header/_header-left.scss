@@ -56,21 +56,21 @@
 		.form-control{
 			border:0;
 			background:#F6F6F6;
-			border-top-left-radius: 2.625rem;
-			border-bottom-left-radius: 2.625rem;
-			height:3.5rem;
+			border-top-left-radius: $radius;
+			border-bottom-left-radius: $radius;
+			height:3rem;
 			@include respond('laptop') {
 				height:3rem;
 			}
 			
 		}
 		.input-group-text{
-			border-top-right-radius: 2.625rem;
-			border-bottom-right-radius: 2.625rem;
-			background:#F1F1F1;
+			border-top-right-radius: $radius;
+			border-bottom-right-radius: $radius;
+			background:#F6F6F6;
 			a{
 				i{
-					font-size:1.5rem;	
+					font-size:1.2rem;	
 				}	
 			}
 			@include respond('laptop') {

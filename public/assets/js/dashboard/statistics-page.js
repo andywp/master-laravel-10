@@ -76,8 +76,8 @@
 			  enabled: false,
 			},
 			markers: {
-		shape: "circle",
-		},
+			shape: "circle",
+			},
 		
 		
 			legend: {
@@ -101,12 +101,14 @@
 			  width: 1,
 			  colors: ['transparent']
 			},
-			grid: {
-				borderColor: '#eee',
-			},
-			xaxis: {
-				
+			
+			x:{
+			
 			  categories: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+			  grid: {
+						color: "rgba(233,236,255,0.5)",
+						drawBorder: true
+					},
 			  labels: {
 			   style: {
 				  colors: '#787878',
@@ -117,19 +119,20 @@
 				},
 			  },
 			  crosshairs: {
-			  show: false,
+				show: false,
 			  }
 			},
-			yaxis: {
+			y:{
+				
 				labels: {
-			   style: {
-				  colors: '#787878',
-				  fontSize: '13px',
-				   fontFamily: 'poppins',
-				  fontWeight: 100,
-				  cssClass: 'apexcharts-xaxis-label',
-			  },
-			  },
+				   style: {
+					  colors: '#787878',
+					  fontSize: '13px',
+					   fontFamily: 'poppins',
+					  fontWeight: 100,
+					  cssClass: 'apexcharts-xaxis-label',
+				  },
+				},
 			},
 			fill: {
 			  opacity: 1
@@ -190,7 +193,8 @@
 								backgroundColor: "rgba(82, 177, 65, 0)",
 								borderColor: "#3FC55E",
 								data: activityData[0].first,
-								borderWidth: 6
+								borderWidth: 6,
+								tension: 0.5,
 							},
 							{
 								label: "Inactive",
@@ -198,7 +202,7 @@
 								borderColor: "#4955FA",
 								data: activityData[0].second,
 								borderWidth: 6,
-								
+								tension: 0.5,
 							},
 							{
 								label: "Inactive",
@@ -206,7 +210,7 @@
 								borderColor: "#F04949",
 								data: activityData[0].third,
 								borderWidth: 6,
-								
+								tension: 0.5,
 							} 
 						]
 					},
@@ -218,12 +222,14 @@
 									radius: 0
 								}
 						},
-						legend:false,
+						plugins:{
+							legend: false,
+						},
 						
 						scales: {
-							yAxes: [{
-								gridLines: {
-									color: "rgba(89, 59, 219,0.1)",
+							y: {
+								grid: {
+									color: "rgba(233,236,255,0.5)",
 									drawBorder: true
 								},
 								ticks: {
@@ -231,10 +237,10 @@
 									fontColor: "#6E6E6E",
 									fontFamily: "Poppins"
 								},
-							}],
-							xAxes: [{
+							},
+							x: {
 								//FontSize: 40,
-								gridLines: {
+								grid: {
 									display: false,
 									zeroLineColor: "transparent"
 								},
@@ -244,7 +250,7 @@
 									fontColor: "#6E6E6E",
 									fontFamily: "Poppins"
 								}
-							}]
+							}
 						},
 						tooltips: {
 							enabled: false,
@@ -298,7 +304,7 @@
 					first: [25, 88, 25, 50, 21, 42, 60, 33, 50, 60, 50, 20, 25]
 				}
 			];
-			activity1.height = 200;
+			activity1.height = 320;
 			
 			var config = {
 				type: "bar",
@@ -324,36 +330,35 @@
 							data:  [35, 18, 15, 35, 40, 20, 30, 25, 22, 20, 45, 35, 35],
 							borderColor: 'rgba(47, 76, 221, 1)',
 							borderWidth: "0",
-							barThickness:'flex',
+							barThickness:'18',
 							backgroundColor: '#F73A0B',
-							minBarLength:10
+							minBarLength:10,
 						}
 					]
 				},
 				options: {
 					responsive: true,
 					maintainAspectRatio: false,
-					
-					legend: {
-						display: false
+					plugins:{
+						legend: false,
 					},
 					scales: {
-						yAxes: [{
-							gridLines: {
-								color: "rgba(233,236,255,1)",
+						y: {
+							grid: {
+								color: "rgba(233,236,255,0.5)",
 								drawBorder: true
 							},
 							ticks: {
 								fontColor: "#3e4954",
 								 max: 60,
-                min: 0,
-                stepSize: 20
+								min: 0,
+								stepSize: 20
 							},
-						}],
-						xAxes: [{
+						},
+						x: {
 							barPercentage: 0.3,
 							
-							gridLines: {
+							grid: {
 								display: false,
 								zeroLineColor: "transparent"
 							},
@@ -362,7 +367,7 @@
 								fontColor: "#3e4954",
 								fontFamily: "Nunito, sans-serif"
 							}
-						}]
+						}
 					},
 					tooltips: {
 						mode: "index",

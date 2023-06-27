@@ -1,7 +1,4 @@
-// @import "../../abstracts/variable";
-
 .dlab-demo-panel {
-    // display: none;
     right: -23.75rem;
     position: fixed;
     top: 0;
@@ -10,6 +7,15 @@
     height: 100vh;
     transition: all .5s ease-in-out;
 	z-index: 9999;
+	.note-text{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		padding: 20px;
+		font-size: 12px;
+		background-color: #fff;
+		color: #9b9a9a;
+	}
     .dlab-demo-trigger {
         position: absolute;
 		z-index: 9;
@@ -63,7 +69,7 @@
 		background:$white;
 	}
 	.dlab-demo-content{
-		height: calc(100vh - 140px);
+		height: calc(100vh - 200px);
 	}
 	.dlab-demo-header{
 		display:flex;

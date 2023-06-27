@@ -9,11 +9,12 @@
 .dropdown-menu{
 	font-size: inherit;
 	border: 0;
-	z-index: 2;
+	z-index: 3;
 	overflow:hidden;
 	border-radius:$radius;
 	box-shadow: 0 0 3.125rem 0 rgba(82, 63, 105, 0.15);
 	margin-top:0;
+	padding: 0.5rem 0rem;
 	
 	.dropdown-item{
 		font-size: 1rem;

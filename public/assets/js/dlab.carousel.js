@@ -1,7 +1,7 @@
 /* JavaScript Document */
-
-
 function carouselReview(){
+	"use strict"
+	
 	jQuery('.testimonial-one').owlCarousel({
 		loop:true,
 		autoplay:true,

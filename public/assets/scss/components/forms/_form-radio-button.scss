@@ -2,6 +2,7 @@
 	&:checked {
 		background-color: var(--primary);
 		border-color: var(--primary);	
+		background-size: cover;
 	}
 	&:focus {
 		border-color: var(--primary);

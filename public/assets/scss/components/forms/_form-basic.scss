@@ -8,10 +8,10 @@
     // height: 2.8125rem;
 	padding: 0.3125rem 1.25rem;
     color: $dark;
-	height: 3.5rem;
-	border-radius:1rem;
+	height: 3rem;
+	border-radius:$radius;
 	@include respond('laptop') {
-		height: 3rem;
+		height: 2.8rem;
 	}
     &:hover,&:focus,&.active{
         box-shadow: none;
@@ -21,21 +21,103 @@
 	&:focus{
 		border-color:var(--primary);
 	}
-	&.solid{
+	/* &.solid{
 		background:$body-bg;
 		border-color:#ececec;
 		color:#000;
 		&[type="file"]{
 			padding: 6px 10px;
 		}
+	} */
+	&-lg {
+		min-height: 3.75rem;
+		padding: 0.5rem 1.1rem;
+		font-size: 1.09375rem;	
+		border-radius: $radius ;
+		line-height: 2.8125rem;
+	}
+	&-sm{
+		min-height: 2.5rem;
+		height: auto;
+		border-radius: $radius;
+	}
+		
+}
+.basic-form{
+	.btn.btn-primary{
+			flex: 0 0 auto;
+			
+		/* @media only screen and (max-width: 1919px) and (min-width: 1750px){
+			padding: 0.688rem 1rem;
+			font-size: 0.875rem;
+		
+		} */
+		@media only screen and (max-width: 1699px) and (min-width: 1600px){
+			padding: 0.688rem 0.675rem;
+			font-size: 0.875rem;
+		}
+		@media only screen and (max-width: 1490px) and (min-width: 1199px){
+			padding: 0.688rem 0.5rem;
+			font-size: 0.675rem;
+			flex: 0 0 25%;
+		}
+	
 	}
 }
+.nice-select.form-control{
+	line-height: 2.2rem;
+	&-lg{
+		line-height:2.8125rem;
+	}
+	&-sm{
+		line-height:1.8rem;
+	}			
+}
 
+.form-control[type="file"] {
+    line-height: 2.2rem;
+    padding-left: 10px;
+}
+.form-control-sm[type="file"] {
+    line-height: 2rem;
+    padding-left: 8px;
+}
+.form-control-lg[type="file"] {
+    line-height: 2.6rem;
+    padding-left: 8px;
+}
 
 .input-rounded {
     border-radius: 6.25rem;
 }
+.input-group-append .input-group-text {
+    border-radius: 0;
+    border-bottom-right-radius: $radius;
+    border-top-right-radius: $radius;
+}
 
+.input-group.input-group-sm {
+	.form-control.form-control-sm{
+		border-bottom-right-radius: $radius;
+		border-top-right-radius: $radius;
+	}
+	
+	.input-group-text{
+		border-bottom-left-radius: $radius;
+		border-top-left-radius: $radius;
+	}	
+}
+.input-group.input-group-lg{
+	.form-control.form-control-lg{
+		border-bottom-right-radius: $radius;
+		border-top-right-radius: $radius;
+	}
+	
+	.input-group-text{
+		border-bottom-left-radius: $radius;
+		border-top-left-radius: $radius;
+	}	
+}
 
 // Input Color
 [data-theme-version="light"],
@@ -157,17 +239,20 @@
 
 // Input Group
 .input-group-text{
-    background: #d7dae3;
+    //background: #d7dae3;
+	background-color:$body-bg;
     border: 0.0625rem solid transparent;
     min-width: 3.125rem;
     display: flex;
     justify-content: center;
 	padding: 0.532rem 0.75rem;
+	border-radius:$radius;
 	
     i{
         font-size: 1rem;
     }
 }
+
 .form-file-label{
     height: 2.5rem;
 	padding: 0.5rem 0.75rem;
@@ -264,4 +349,9 @@
 		border:0;
 		height:auto;
 	}
+	.form-control[type="file"] {
+		line-height: 28px;
+		padding-left: 10px;
+	}
 }
+

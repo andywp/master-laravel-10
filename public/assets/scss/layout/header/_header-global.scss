@@ -3,13 +3,13 @@
 /////////////////
 .header {
     // width: 100%;
-    height: 7.5rem;
+    height: var(--height);
     z-index: 1;
     position: relative;
     padding: 0rem;
     background:var(--headerbg);
     z-index: 3;
-    padding-left: 20.563rem;
+    padding-left: var(--width);
 	padding-top:0rem;
     transition: all .2s ease;
 	
@@ -24,12 +24,15 @@
 			padding-left: 5rem;
 		}
 		@include respond ('tab-land') {
-			padding-left: 2rem;
+			padding-left: 4rem;
 		}
         @include custommq($max: 47.9375rem) {
             padding-left: 3.75rem;
 			padding-right: 0.938rem;
         }
+		@include respond ('phone'){
+			padding-right:0.538rem;
+		}
 		
     }
     .navbar {
@@ -210,7 +213,7 @@ svg.pulse-svg {
         width: 100%;
     }
     .content-body {
-        padding-top: 7.5rem;
+        padding-top: var(--height);
 		@include respond('laptop'){
 			padding-top:5.5rem;
 		}

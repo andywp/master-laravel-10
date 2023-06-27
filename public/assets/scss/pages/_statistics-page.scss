@@ -1,9 +1,6 @@
 .static-icon{
 	text-align:center;
-	h3{
-		font-size:1.75rem;
-		font-weight:600;
-	}	
+	
 	span{
 		i{
 			height:3.813rem;
@@ -15,6 +12,10 @@
 			border-radius: 3.813rem;
 			font-size:1.7rem;
 			margin-bottom:1rem;
+			
+			@include respond ('phone'){
+				font-size:1.3rem;
+			}
 			
 		}	
 	}
@@ -66,4 +67,11 @@
 }
 .bg-follow{
 	background:#412EFF;	
+}
+#chartBar{
+	svg{
+		text tspan {
+			fill: #828690;
+		}
+	}
 }

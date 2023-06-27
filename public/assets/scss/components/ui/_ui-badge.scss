@@ -1,13 +1,13 @@
-
-
-
 .badge{
     line-height: 1.5;
-    border-radius: 1.03125rem;
+    border-radius: 0.5rem;
     // font-size: 0.75rem;
     // font-weight: normal;
     padding: 0.25rem 0.625rem;
 	border:0.0625rem solid transparent;
+	min-width: 23px;
+    min-height: 23px;
+	font-weight:600;
 }
 
 .badge-rounded{
@@ -68,20 +68,22 @@
 
 
 .badge-xs {
-    font-size: 0.625rem;
-    padding: 0rem 0.3125rem;
-    line-height: 1.125rem;
+	padding:0px 8px;
+	line-height:20px;
+	border-radius:$radius-sm;
+	font-weight:500;
+	
+	&.style-1{
+		margin-left:16px;
+	}
 }
+
 .badge-sm {
 	font-size: 0.6875rem;
     padding: 0.3125rem 0.5rem;
     line-height: 0.6875rem;
 }
-//.badge-md {
-//    font-size: 0.8125rem;
-//    padding: 0rem 0.5625rem;
-//    line-height: 1.5625rem;
-//}
+
 .badge-lg {
     font-size: 0.875rem;
     padding: 0rem 0.625rem;
@@ -128,55 +130,59 @@
     background: #ADB6C7;
 }
 .light.badge-success {
-    background-color: $success-light;
+    background-color: lighten($success, 25%);
 	color:$success;
 	@at-root [data-theme-version="dark"] & {
-		background-color: $success-opacity;
+		background-color: lighten($success, 25%);
 	}
 }
 .light.badge-info {
-    background-color: $info-light;
+    background-color: lighten($info, 25%);
 	color:$info;
 	@at-root [data-theme-version="dark"] & {
-		background-color: $info-opacity;
+		background-color: lighten($info, 25%);
 	}
 }
 .light.badge-primary {
-    background-color: var(--rgba-primary-1);
+    background-color: lighten($primary, 45%);
 	color:var(--primary);
 	@at-root [data-theme-version="dark"] & {
-		background-color: var(--rgba-primary-1);
+		background-color: lighten($primary, 45%);
 	}
 }
 .light.badge-secondary {
     background-color: $secondary-light;
 	color:$secondary;
 	@at-root [data-theme-version="dark"] & {
-		background-color: $secondary-opacity;
-		color:$white;
+		background-color: lighten($primary, 45%);
+		
 	}
 }
 .light.badge-warning {
     background-color: $warning-light;
 	color:$warning;
 	@at-root [data-theme-version="dark"] & {
-		background-color: $warning-opacity;
+		background-color: lighten($primary, 45%);
 	}
 }
 .light.badge-danger {
     background-color: $danger-light;
 	color:$danger;
 	@at-root [data-theme-version="dark"] & {
-		background-color: $danger-opacity;
+		background-color: lighten($primary, 45%);
 	}
 }
 .light.badge-dark {
     background-color: $dark-light;
 	color:$dark;
 	@at-root [data-theme-version="dark"] & {
-		background-color: $dark-opacity;
+		background-color: lighten($primary, 45%);
 		color:$body-color;
 	}
+}
+.light.badge-light {
+    background-color:  lighten($light, 20%);
+	color:$light;
 }
 
 

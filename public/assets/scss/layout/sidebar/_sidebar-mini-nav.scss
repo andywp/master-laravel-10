@@ -133,6 +133,12 @@
                                 display: none;
                             }
                         }
+						.badge-xs{
+							&.style-1{
+								margin-left:-5px;
+								margin-top:5px;
+							}
+						}
                     }
                 }
                 .nav-label,
@@ -144,7 +150,7 @@
 				top:5.5rem;
 			}
 			.header-info2{
-				padding:0;	
+				//padding:0;	
 			}
 			.sidebar-info{
 				display:none!important;	
@@ -174,7 +180,7 @@
 
     [data-sidebar-style="mini"][data-layout="vertical"] {
         .dlabnav {
-			position: absolute !important;
+			position: absolute ;
             .metismenu {
 
                 li {
@@ -317,7 +323,17 @@
             width: 74.9375rem;
         }
     }
-	
+ [data-sidebar-style="mini"][data-container="wide-boxed"][data-layout="horizontal"],	
+ [data-sidebar-style="mini"][data-container="boxed"][data-layout="horizontal"] {
+	.dlabnav{
+		.badge{
+			position: absolute;
+			right: -3px;
+			top: 1px;
+		}
+	}
+ 
+ }
 	[data-sidebar-style="mini"][data-layout="horizontal"] {
 		.dlabnav{
 			.metismenu {
@@ -327,6 +343,12 @@
 					
 					& > a {
 						padding: 1.125rem;
+						.badge-xs{
+							&.style-1{
+								margin-left:0px;
+								
+							}
+						}
 						
 						i{
 							padding: 0;	

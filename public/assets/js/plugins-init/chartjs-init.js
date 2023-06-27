@@ -7,7 +7,7 @@
 	} */
 
  var dlabSparkLine = function(){
-	let draw = Chart.controllers.line.__super__.draw; //draw shadow
+	//let draw = Chart.controllers.line.__super__.draw; //draw shadow
 	
 	var screenWidth = $(window).width();
 	
@@ -24,7 +24,7 @@
 					labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
 					datasets: [
 						{
-							label: "My First dataset",
+							label: "My First dataset",	
 							data: [65, 59, 80, 81, 56, 55, 40],
 							borderColor: 'rgba(249, 58, 11, 1)',
 							borderWidth: "0",
@@ -33,17 +33,19 @@
 					]
 				},
 				options: {
-					legend: false, 
+					plugins:{
+						legend: false,
+					},
 					scales: {
-						yAxes: [{
+						y: {
 							ticks: {
 								beginAtZero: true
 							}
-						}],
-						xAxes: [{
+						},
+						x: {
 							// Change here
 							barPercentage: 0.5
-						}]
+						}
 					}
 				}
 			});
@@ -78,17 +80,19 @@
 					]
 				},
 				options: {
-					legend: false, 
+					plugins:{
+						legend: false,
+					},
 					scales: {
-						yAxes: [{
+						y: {
 							ticks: {
 								beginAtZero: true
 							}
-						}],
-						xAxes: [{
+						},
+						x: {
 							// Change here
 							barPercentage: 0.5
-						}]
+						}
 					}
 				}
 			});
@@ -164,6 +168,9 @@
 				type: 'bar',
 				data: barChartData,
 				options: {
+					plugins:{
+						legend: false,
+					},
 					legend: {
 						display: false
 					}, 
@@ -176,12 +183,12 @@
 					},
 					responsive: true,
 					scales: {
-						xAxes: [{
+						x: {
 							stacked: true,
-						}],
-						yAxes: [{
+						},
+						y: {
 							stacked: true
-						}]
+						}
 					}
 				}
 			});
@@ -196,22 +203,22 @@
 		//basic line chart
 			const lineChart_1 = document.getElementById("lineChart_1").getContext('2d');
 
-			Chart.controllers.line = Chart.controllers.line.extend({
-				draw: function () {
-					draw.apply(this, arguments);
-					let nk = this.chart.chart.ctx;
-					let _stroke = nk.stroke;
-					nk.stroke = function () {
-						nk.save();
-						nk.shadowColor = 'rgba(255, 0, 0, .2)';
-						nk.shadowBlur = 10;
-						nk.shadowOffsetX = 0;
-						nk.shadowOffsetY = 10;
-						_stroke.apply(this, arguments)
-						nk.restore();
-					}
-				}
-			});
+			// Chart.controllers.line = Chart.controllers.line.extend({
+			// 	draw: function () {
+			// 		draw.apply(this, arguments);
+			// 		let nk = this.chart.chart.ctx;
+			// 		let _stroke = nk.stroke;
+			// 		nk.stroke = function () {
+			// 			nk.save();
+			// 			nk.shadowColor = 'rgba(255, 0, 0, .2)';
+			// 			nk.shadowBlur = 10;
+			// 			nk.shadowOffsetX = 0;
+			// 			nk.shadowOffsetY = 10;
+			// 			_stroke.apply(this, arguments)
+			// 			nk.restore();
+			// 		}
+			// 	}
+			// });
 			
 			lineChart_1.height = 100;
 
@@ -227,14 +234,17 @@
 							borderColor: 'rgba(249, 58, 11, 1)',
 							borderWidth: "2",
 							backgroundColor: 'transparent',  
-							pointBackgroundColor: 'rgba(249, 58, 11, 1)'
+							pointBackgroundColor: 'rgba(249, 58, 11, 1)',
+							tension: 0.5,
 						}
 					]
 				},
 				options: {
-					legend: false, 
+					plugins:{
+						legend: false,
+					}, 
 					scales: {
-						yAxes: [{
+						y: {
 							ticks: {
 								beginAtZero: true, 
 								max: 100, 
@@ -242,12 +252,12 @@
 								stepSize: 20, 
 								padding: 10
 							}
-						}],
-						xAxes: [{
+						},
+						x: {
 							ticks: {
 								padding: 5
 							}
-						}]
+						}
 					}
 				}
 			});
@@ -265,22 +275,22 @@
 			lineChart_2gradientStroke.addColorStop(0, "rgba(249, 58, 11, 1)");
 			lineChart_2gradientStroke.addColorStop(1, "rgba(249, 58, 11, 0.5)");
 
-			Chart.controllers.line = Chart.controllers.line.extend({
-				draw: function () {
-					draw.apply(this, arguments);
-					let nk = this.chart.chart.ctx;
-					let _stroke = nk.stroke;
-					nk.stroke = function () {
-						nk.save();
-						nk.shadowColor = 'rgba(0, 0, 128, .2)';
-						nk.shadowBlur = 10;
-						nk.shadowOffsetX = 0;
-						nk.shadowOffsetY = 10;
-						_stroke.apply(this, arguments)
-						nk.restore();
-					}
-				}
-			});
+			// Chart.controllers.line = Chart.controllers.line.extend({
+			// 	draw: function () {
+			// 		draw.apply(this, arguments);
+			// 		let nk = this.chart.chart.ctx;
+			// 		let _stroke = nk.stroke;
+			// 		nk.stroke = function () {
+			// 			nk.save();
+			// 			nk.shadowColor = 'rgba(0, 0, 128, .2)';
+			// 			nk.shadowBlur = 10;
+			// 			nk.shadowOffsetX = 0;
+			// 			nk.shadowOffsetY = 10;
+			// 			_stroke.apply(this, arguments)
+			// 			nk.restore();
+			// 		}
+			// 	}
+			// });
 				
 			lineChart_2.height = 100;
 
@@ -296,14 +306,17 @@
 							borderColor: lineChart_2gradientStroke,
 							borderWidth: "2",
 							backgroundColor: 'transparent', 
-							pointBackgroundColor: 'rgba(249, 58, 11, 0.5)'
+							pointBackgroundColor: 'rgba(249, 58, 11, 0.5)',
+							tension: 0.5,
 						}
 					]
 				},
 				options: {
-					legend: false, 
+					plugins:{
+						legend: false,
+					},
 					scales: {
-						yAxes: [{
+						y: {
 							ticks: {
 								beginAtZero: true, 
 								max: 100, 
@@ -311,12 +324,12 @@
 								stepSize: 20, 
 								padding: 10
 							}
-						}],
-						xAxes: [{ 
+						},
+						x: { 
 							ticks: {
 								padding: 5
 							}
-						}]
+						}
 					}
 				}
 			});
@@ -335,22 +348,22 @@
 			lineChart_3gradientStroke2.addColorStop(0, "rgba(255, 92, 0, 1)");
 			lineChart_3gradientStroke2.addColorStop(1, "rgba(255, 92, 0, 1)");
 
-			Chart.controllers.line = Chart.controllers.line.extend({
-				draw: function () {
-					draw.apply(this, arguments);
-					let nk = this.chart.chart.ctx;
-					let _stroke = nk.stroke;
-					nk.stroke = function () {
-						nk.save();
-						nk.shadowColor = 'rgba(0, 0, 0, 0)';
-						nk.shadowBlur = 10;
-						nk.shadowOffsetX = 0;
-						nk.shadowOffsetY = 10;
-						_stroke.apply(this, arguments)
-						nk.restore();
-					}
-				}
-			});
+			// Chart.controllers.line = Chart.controllers.line.extend({
+			// 	draw: function () {
+			// 		draw.apply(this, arguments);
+			// 		let nk = this.chart.chart.ctx;
+			// 		let _stroke = nk.stroke;
+			// 		nk.stroke = function () {
+			// 			nk.save();
+			// 			nk.shadowColor = 'rgba(0, 0, 0, 0)';
+			// 			nk.shadowBlur = 10;
+			// 			nk.shadowOffsetX = 0;
+			// 			nk.shadowOffsetY = 10;
+			// 			_stroke.apply(this, arguments)
+			// 			nk.restore();
+			// 		}
+			// 	}
+			// });
 				
 			lineChart_3.height = 100;
 
@@ -366,21 +379,25 @@
 							borderColor: lineChart_3gradientStroke1,
 							borderWidth: "2",
 							backgroundColor: 'transparent', 
-							pointBackgroundColor: 'rgba(249, 58, 11, 0.5)'
+							pointBackgroundColor: 'rgba(249, 58, 11, 0.5)',
+							tension: 0.5,
 						}, {
 							label: "My First dataset",
 							data: [5, 20, 15, 41, 35, 65, 80],
 							borderColor: lineChart_3gradientStroke2,
 							borderWidth: "2",
 							backgroundColor: 'transparent', 
-							pointBackgroundColor: 'rgba(254, 176, 25, 1)'
+							pointBackgroundColor: 'rgba(254, 176, 25, 1)',
+							tension: 0.5,
 						}
 					]
 				},
 				options: {
-					legend: false, 
+					plugins:{
+						legend: false,
+					}, 
 					scales: {
-						yAxes: [{
+						y: {
 							ticks: {
 								beginAtZero: true, 
 								max: 100, 
@@ -388,12 +405,12 @@
 								stepSize: 20, 
 								padding: 10
 							}
-						}],
-						xAxes: [{ 
+						},
+						x: { 
 							ticks: {
 								padding: 5
 							}
-						}]
+						}
 					}
 				}
 			});
@@ -436,19 +453,23 @@
 							borderColor: 'rgba(58,122,254,1)',
 							borderWidth: "3",
 							backgroundColor: 'rgba(0,0,0,0)', 
-							pointBackgroundColor: 'rgba(0, 0, 0, 0)'
+							pointBackgroundColor: 'rgba(0, 0, 0, 0)',
+							tension: 0.5,
+							fill:true,
 						}
 					]
 				},
 				options: {
-					legend: false, 
+					plugins:{
+						legend: false,
+					},
 					elements: {
 							point:{
 								radius: 0
 							}
 					},
 					scales: {
-						yAxes: [{
+						y: {
 							ticks: {
 								beginAtZero: true, 
 								max: 100, 
@@ -459,13 +480,13 @@
 							borderWidth:3,
 							display:false,
 							lineTension:0.4,
-						}],
-						xAxes: [{ 
+						},
+						x: { 
 							ticks: {
 								padding: 5
 							},
 							
-						}]
+						}
 					}
 				}
 			});
@@ -491,14 +512,18 @@
 							borderColor: 'rgba(0, 0, 1128, .3)',
 							borderWidth: "1",
 							backgroundColor: 'rgba(249, 58, 11, .5)', 
-							pointBackgroundColor: 'rgba(0, 0, 1128, .3)'
+							pointBackgroundColor: 'rgba(0, 0, 1128, .3)',
+							tension: 0.5,
+							fill:true,
 						}
 					]
 				},
 				options: {
-					legend: false, 
+					plugins:{
+						legend: false,
+					},
 					scales: {
-						yAxes: [{
+						y: {
 							ticks: {
 								beginAtZero: true, 
 								max: 100, 
@@ -506,12 +531,12 @@
 								stepSize: 20, 
 								padding: 10
 							}
-						}],
-						xAxes: [{ 
+						},
+						x: { 
 							ticks: {
 								padding: 5
 							}
-						}]
+						}
 					}
 				}
 			});
@@ -539,14 +564,18 @@
 							data: [25, 20, 60, 41, 66, 45, 80],
 							borderColor: "#ff2625",
 							borderWidth: "4",
-							backgroundColor: areaChart_2gradientStroke
+							backgroundColor: areaChart_2gradientStroke,
+							tension: 0.5,
+							fill:true,
 						}
 					]
 				},
 				options: {
-					legend: false, 
+					plugins:{
+						legend: false,
+					},
 					scales: {
-						yAxes: [{
+						y: {
 							ticks: {
 								beginAtZero: true, 
 								max: 100, 
@@ -554,12 +583,12 @@
 								stepSize: 20, 
 								padding: 5
 							}
-						}],
-						xAxes: [{ 
+						},
+						x: { 
 							ticks: {
 								padding: 5
 							}
-						}]
+						}
 					}
 				}
 			});
@@ -584,21 +613,28 @@
 							data: [25, 20, 60, 41, 66, 45, 80],
 							borderColor: 'rgb(249, 58, 11)',
 							borderWidth: "1",
-							backgroundColor: 'rgba(249, 58, 11, .5)'
+							backgroundColor: 'rgba(249, 58, 11, .5)',
+							tension: 0.5,
+							fill:true,
 						}, 
 						{
 							label: "My First dataset",
 							data: [5, 25, 20, 41, 36, 75, 70],
 							borderColor: 'rgb(255, 92, 0)',
 							borderWidth: "1",
-							backgroundColor: 'rgba(255, 92, 0, .5)'
+							backgroundColor: 'rgba(255, 92, 0, .5)',
+							tension: 0.5,
+							fill:true,
 						}
 					]
 				},
 				options: {
-					legend: false, 
+					plugins:{
+						legend: false,
+					},
+				 
 					scales: {
-						yAxes: [{
+						y: {
 							ticks: {
 								beginAtZero: true, 
 								max: 100, 
@@ -606,12 +642,12 @@
 								stepSize: 20, 
 								padding: 10
 							}
-						}],
-						xAxes: [{ 
+						},
+						x: { 
 							ticks: {
 								padding: 5
 							}
-						}]
+						}
 					}
 				}
 			});
@@ -655,7 +691,9 @@
 					]
 				},
 				options: {
-					legend: false,
+					plugins:{
+						legend: false,
+					},
 					maintainAspectRatio: false, 
 					scale: {
 						ticks: {
@@ -701,7 +739,9 @@
 					]
 				},
 				options: {
-					responsive: true, 
+					plugins:{
+						legend: false, 
+					},	
 					legend: false, 
 					maintainAspectRatio: false
 				}

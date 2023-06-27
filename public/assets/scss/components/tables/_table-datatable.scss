@@ -38,7 +38,7 @@ table.dataTable tbody tr, table.dataTable tbody td{
 table.dataTable thead th{
     color: $black;
 	white-space:nowrap;
-	font-size:1.125rem;
+	font-size:1rem;
 	text-transform:capitalize;
     font-weight: 600;
 	padding: 1.25rem 0.9375rem;
@@ -75,31 +75,7 @@ table.dataTable tfoot th{
         color: $white;
     }
 }
-/* .dataTables_wrapper .dataTables_paginate .paginate_button{
-	border-radius: 12px;
-    padding: 12px 20px;
-	background:$primary-light;
-	color:$primary;
-	&:focus,
-	&:active,
-	&:hover{
-		color: $white !important;
-		background: $primary;
-		border: 0 !important;
-		box-shadow: none;
-	}
-	&.current{
-		color: $white !important;
-		background: $primary;
-		border: 0 !important;
-	}
-	&.current:hover,
-	&.previous:hover,
-	&.next:hover{
-		background: $primary;
-		color: $white !important;
-	}
-} */
+
 td.text-ov {
     white-space: nowrap;
 }
@@ -108,13 +84,17 @@ td.text-ov {
 	align-items: center;
     display: flex;
 	flex-flow:wrap;
+	justify-content:center;
+	@include respond ('phone'){
+		flex-flow: nowrap;
+	}
 	.paginate_button.previous,.paginate_button.next{
-		font-size: 1.125rem;
+		font-size: 1rem;
 		height:3.125rem;
-		width: fit-content;
+		width: 3.125rem;
 		border:0.0625rem solid var(--primary);
 		border-radius:2.8125rem;
-		padding:0 1.25rem;
+		padding:0 0.85rem;
 		line-height:3.125rem;
 		margin:0 0.625rem;
 		display:inline-block;
@@ -129,10 +109,12 @@ td.text-ov {
 			color:var(--primary)!important;
 		}
 		@include respond ('phone'){
-			height:3.125rem;
+			height:2.5rem;
 			width:fit-content;
-			line-height:3.125rem;
+			min-width:2.5rem;
+			line-height:2.5rem;
 			padding:0 0.75rem;
+			margin:0.625rem 0;
 		}
 	}
 	span{
@@ -149,12 +131,15 @@ td.text-ov {
 			color:var(--primary)!important;
 			background:var(--rgba-primary-1);
 			@include respond ('phone'){
-				height:3.125rem;
-				width:3.125rem;
-				line-height:3.125rem;
+				height:2.5rem;
+				width:2.5rem;
+				line-height:2.5rem;
+				font-size:1rem;
 			}
 			&.current,&:hover{
-				color: var(--primary) !important;
+				color: #fff !important;
+				background:var(--primary);
+				border:1px solid transparent;	
 				&:hover{
 					color:$white!important;
 					background:var(--primary)!important;
@@ -229,6 +214,9 @@ table.dataTable.no-footer{
 	border-radius:1rem;
 	padding:0.125rem 0;
 	margin-bottom:1.25rem;
+	@at-root [data-theme-version="dark"] & {
+			color:$d-ctl;
+	}
 }
 .paging_simple_numbers.dataTables_paginate {
 	padding: 0.3125rem 0.3125rem;
@@ -246,6 +234,7 @@ table.dataTable.display tbody td {
     border-color: $border-color;
     @at-root [data-theme-version="dark"] & {
         border-color: $d-border;
+	   color:rgba(255,255,255,0.7);
     }
 }
 
@@ -256,6 +245,23 @@ table.dataTable.display tbody td {
 				font-size: 0.813rem !important;
 				padding: 0.625rem 1rem;
 			}
+		}
+		@at-root [data-theme-version="dark"] & {
+			color:$d-ctl;
+		}
+	}
+}
+.dataTables_paginate.paging_simple_numbers{
+	span{
+		@include respond ('phone'){
+			display:flex;
+		}
+	}
+}
+#example_wrapper.dataTables_wrapper{
+	.paginate_button.previous,.paginate_button.next{
+		@include respond ('phone'){
+			min-width:7rem;
 		}
 	}
 }

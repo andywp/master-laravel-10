@@ -28,10 +28,11 @@
 						content: none!important
 					}
 					&:after{
-						font-family: fontawesome;
+						font-family: "Font Awesome 5 Free";
 						border: 0;
 						margin: 0 auto;
 						font-size: 1.375rem;
+						font-weight: 700;
 					}
 					&:hover{
 						background-color: var(--primary);

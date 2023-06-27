@@ -13,27 +13,20 @@
 }
 
 .page-titles {
-	padding: 0.9375rem 2.5rem;
+	padding: 0.9375rem 1.875rem;
     background: $white;
     margin-bottom: 1.875rem;
-	border-radius: 1rem;
+	border-radius: $radius;
     margin-top: 0;
     margin-left: 0;
     margin-right: 0;
     @at-root [data-theme-version="dark"] & {
         background: $dark-card;
     }
-
-    @include respond('tab-land') {
-		margin-top: -1.875rem;
+	
+	@include respond ('phone'){
+		padding:0.9375rem 1.075rem;
 	}
-    @include respond('phone-land') {
-		margin-left: -1.25rem;
-		margin-right: -1.25rem;
-		margin-bottom: 0.9375rem;
-		padding: 0.9375rem 1.25rem;
-		margin-top: -1.25rem;
-    }
 
     .justify-content-sm-end{
         align-items: center;
@@ -68,23 +61,12 @@
 
             &.active{
                 color:var(--primary);
-				font-weight: 600;
-				a{
-					color:$secondary;
-				}
+				font-weight: 500;
+				
             }
         }
         
-        .breadcrumb-item + .breadcrumb-item {
-            &:before {
-                //content: "\e606";
-                /* font-family: 'simple-line-icons';
-                font-weight: 400;
-				position:absolute;
-                font-size: 10px; */
-				color:$secondary;
-            }
-        }
+       
 
         &-datepicker{
             font-size: 0.75rem;

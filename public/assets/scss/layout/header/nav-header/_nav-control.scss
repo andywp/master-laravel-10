@@ -20,15 +20,15 @@
 }
 
 .nav-header {
-    height: 7.5rem;
-    width: 20.5rem;
+    height: var(--height);
+    width: var(--width);
     display: inline-block;
     text-align: left;
     position: absolute;
     top:0;
     background-color:var(--nav-headbg);
     transition: all .2s ease;
-    z-index: 5;
+    z-index: 7;
 	
     .logo-abbr {
         max-width: 2.9375rem;
@@ -123,7 +123,7 @@
     padding: 0.125rem 0.5rem 0;
     border-radius: 0.125rem;
     @include respond('laptop') {
-		right: 0.444rem;
+		right: -3.444rem;
 	}
     @include respond('phone-land') {
         right: -3rem;

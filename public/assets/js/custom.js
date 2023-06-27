@@ -7,7 +7,7 @@
 	
 	var handleNiceSelect = function(){
 		if(jQuery('.default-select').length > 0 ){
-			jQuery('.default-select').niceSelect();
+			jQuery('.default-select').selectpicker();
 		}
 	}
 
@@ -32,10 +32,17 @@
 	}
    
     var handleAllChecked = function() {
-		$("#checkAll").on('change',function() {
+		$("#checkAll, #checkAll4, #checkAll1, #checkAll2, #checkAll5").on('change',function() {
 			$("td input, .email-list .custom-checkbox input").prop('checked', $(this).prop("checked"));
 		});
+		$(".checkAllInput").on('click',function() {
+			jQuery(this).closest('.ItemsCheckboxSec').find('input[type="checkbox"]').prop('checked', true);		
+		});
+		$(".unCheckAllInput").on('click',function() {
+			jQuery(this).closest('.ItemsCheckboxSec').find('input[type="checkbox"]').prop('checked', false);		
+		});
 	}
+		
 
 	var handleNavigation = function() {
 		$(".nav-control").on('click', function() {
@@ -310,7 +317,22 @@
         $(".chatbox .msg_card_body").css('height',ch);
     }
     
-
+	var domoPanel = function(){
+		if(jQuery(".dlab-demo-content").length>0) {
+			const ps = new PerfectScrollbar('.dlab-demo-content');
+			$('.dlab-demo-trigger').on('click', function() {
+					$('.dlab-demo-panel').addClass('show');
+			  });
+			  $('.dlab-demo-close, .bg-close').on('click', function() {
+					$('.dlab-demo-panel').removeClass('show');
+			  });
+			  
+			  $('.dlab-demo-bx').on('click', function() {
+				  $('.dlab-demo-bx').removeClass('demo-active');
+				  $(this).addClass('demo-active');
+			  });
+		}
+	} 
 	
 	var handleDatetimepicker = function(){
 		if(jQuery("#datetimepicker1").length>0) {
@@ -363,6 +385,20 @@
 			});
 		}
 	}	
+	var handleThemeMode = function() {
+	
+		jQuery('.dz-theme-mode').on('click',function(){
+			jQuery(this).toggleClass('active');
+			
+			if(jQuery(this).hasClass('active')){
+				jQuery('body').attr('data-theme-version','dark');
+			}else{
+				jQuery('body').attr('data-theme-version','light');
+			}
+		}); 
+		
+		
+	}
   
 	/* Function ============ */
 	return {
@@ -375,10 +411,10 @@
 			handleMinHeight();
 			handleDataAction();
 			handleHeaderHight();
-			handleDzScroll();
+			//handleDzScroll();
 			handleMenuTabs();
 			handleChatbox();
-			handlePerfectScrollbar();
+			//handlePerfectScrollbar();
 			handleBtnNumber();
 			handleDzChatUser();
 			handleDzFullScreen();
@@ -388,6 +424,9 @@
 			handleLightgallery();
 			handleCustomFileInput();
 			vHeight();
+			domoPanel();
+			handleThemeMode();
+			
 			handleDatetimepicker();
 			handleCkEditor();
 		},
@@ -416,6 +455,13 @@ jQuery(document).ready(function() {
 	$('[data-bs-toggle="popover"]').popover();
     'use strict';
 	Jobick.init();
+	
+	$('a[data-bs-toggle="tab"]').click(function(){
+		// todo remove snippet on bootstrap v5
+		$('a[data-bs-toggle="tab"]').click(function() {
+			$($(this).attr('href')).show().addClass('show active').siblings().hide();
+		})
+	});
 	
 });
 /* Document.ready END */

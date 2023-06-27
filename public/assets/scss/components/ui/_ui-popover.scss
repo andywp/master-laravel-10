@@ -1,5 +1,5 @@
 .popover{
-    border: 0.125rem solid $secondary;
+    border: 0.125rem solid rgba($secondary, 0.1);
     min-width: 13.125rem;
     box-shadow: 0 0 1.875rem 0 rgba(0,0,0,0.1);
 	@at-root [data-theme-version="dark"] & {
@@ -17,6 +17,9 @@
 
     &-body{
         font-size: 0.75rem;
+		@at-root [data-theme-version="dark"] & {
+			color:#828690 ;
+		}
     }
 	.popover-header{
 		@at-root [data-theme-version="dark"] & {

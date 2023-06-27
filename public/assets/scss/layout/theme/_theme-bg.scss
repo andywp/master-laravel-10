@@ -25,6 +25,16 @@
 					background:$black;
 				}
 			}
+			.nav-header .rect-primary-rect {
+				fill: #ffffff;
+			}
+			.nav-header{
+				.logo-abbr{
+					path{
+						fill:#f93a0b;
+					}
+				}
+			}
 			
 			//special work for color
 			&[data-nav-headerbg="color_8"]{
@@ -178,7 +188,7 @@
 				.sidebar-info{
 					color: $white; 
 					i{
-						color: $white; 		
+						color: $white!important; 		
 					}
 				}
 			}
@@ -187,6 +197,9 @@
 			}
 			.copyright{
 				color:$white;
+				strong{
+					color:$white;
+				}
 			}
 			//special work for color
 			&[data-sibebarbg="color_8"]{
@@ -284,6 +297,9 @@
 					path{
 						fill:$white;
 					}
+				}
+				#icon-dark{
+					color:$white;
 				}
 			}
 			.header-profile > a.nav-link .header-info small, .header-profile > a.nav-link .header-info span{

@@ -26,13 +26,21 @@
 }
 
 .content-body {
-    margin-left: 20.563rem;
+    margin-left: var(--width);
     z-index: 0;
     transition: all .2s ease;
     @include respond('laptop') {
         margin-left: 17rem;
     }
 }
+.header-profile2{
+	.dropdown-menu.show{
+		//width:100%;
+		margin-right:6px!important;
+		width:16.313rem;
+	}
+}
+
 // Bell //
 .bell img{
 	-webkit-animation: ring 8s .7s ease-in-out infinite;
@@ -126,11 +134,11 @@
 // Sidebar
 //////////////
 .dlabnav {
-    width: 20.5rem;
+    width: var(--width);
     padding-bottom: 0;
-    height: calc(100% - 7.5rem);
+    height: calc(100% - var(--height));
     position: absolute;
-    top: 7.5rem;
+    top: var(--height);
     padding-top: 0;
     z-index: 6;
     background-color: var(--sidebar-bg);
@@ -153,6 +161,7 @@
     .dlabnav-scroll {
         position: relative;
         height: 100%;
+		overflow-y:scroll;
 		
         // overflow: visible!important;
         // border-top-left-radius: 0.3125rem;
@@ -268,7 +277,7 @@
 					font-weight: 600;
 					box-shadow:none;
 					i{
-						font-weight:100;
+						font-weight:900;
 					}
 					g [fill] {
 						fill: var(--primary);
@@ -400,15 +409,15 @@
 		
 	}
 	.header-info2{
-		padding: 0 20px;
+		padding: 0.5rem 1rem;
 		img{
-			height:3.75rem;
-			width:3.75rem;
-			border-radius:1.25rem;
+			height:3.5rem;
+			width:3.5rem;
+			border-radius:$radius;
 			margin-right: 1.2rem;
 		}
 		span{
-			font-size:1.25rem;
+			font-size:1.125rem;
 			font-weight:500;
 			color:#393939;
 			@include respond ('laptop'){
@@ -419,9 +428,21 @@
 			margin-left:1rem;
 			font-size: 1.2rem;
 		}
-		@include respond('laptop') {
-			padding:0;	
+		/* @include respond('laptop') {
+			//padding:0;	
 		}
+		@include respond ('tab-land'){
+			padding:10px;
+		}
+		@include respond ('tab-port'){
+			padding:10px!important;
+		}
+		@include respond('phone-land'){
+			padding:10px;
+		}
+		@include respond('phone'){
+			padding:10px;
+		} */
 	}
 	
 }
@@ -435,7 +456,8 @@
 	}
 	strong{
 		display:block;
-		font-size: 0.875rem;
+		font-size: 0.875rem;	
+		color:$black;
 	}
 }
 

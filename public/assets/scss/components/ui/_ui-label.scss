@@ -94,7 +94,8 @@ code{
     word-break: break-word;
     padding: 0.125rem 0.3125rem;
     border-radius: 0.1875rem;
-	background: lighten($danger, 33%);
+	//background: lighten($danger, 33%);
+	background-color:var(--rgba-primary-1);
     color: $danger;
 	@at-root [data-theme-version="dark"] & {
 		background: rgba($danger, 0.1);

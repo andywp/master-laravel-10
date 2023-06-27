@@ -12,8 +12,8 @@ button{
 
 
 .btn {
-	padding:0.938rem 1.5rem;
-	border-radius: 1.125rem;
+	padding:0.688rem 1.5rem;
+	border-radius: $radius;
 	font-weight:400;
 	font-size:1rem;
     &:hover, &:focus, &:active, &.active{
@@ -73,6 +73,13 @@ button{
     padding: 0.4375rem;
     height: 2.5rem;
     min-height: 2.5rem;
+}
+.sharp-lg {
+    min-width: 48px;
+    padding: 11px;
+    height: 48px;
+    min-height: 40px;
+    margin-right: 8px;
 }
 .sharp.btn-xs{
     padding: 0.1875rem;
@@ -215,6 +222,12 @@ button{
 			color: #fff;
 			g [fill]{
 				fill:$white;
+			}
+			svg{
+				path{
+					fill:$white;
+					
+				}
 			}
 		}
 	}
@@ -362,6 +375,7 @@ button{
 .btn.tp-btn-light{
 	background-color:transparent;
 	border-color: transparent;
+	color:$light;
 	
 	&.btn-success {
 		color:$success;
@@ -498,21 +512,22 @@ button{
 }
 .btn-xs {
     font-size: 0.75rem;
-    padding: 0.438rem 1rem;
+    padding: 0.375rem 1rem;
     // padding  : 0.5 2.5rem !important;
 	font-weight: 600;
 }
 
 .btn-sm {
     font-size: 0.813rem  !important;
-	padding:0.625rem 1rem;
+	padding:0.579rem 1rem;
+	border-radius:$radius-sm;
 }
 .btn-md {
     font-size: 0.875rem  !important;
 	padding: 0.875rem 1.25rem;
 }
 .btn-lg{
-    padding: 1rem 2rem;
+    padding: 0.969rem 2rem;
     font-size: 1.125rem !important;
 	@include respond('phone') {
 		 padding: 0.75rem 1.25rem;
@@ -536,7 +551,7 @@ button{
 }
 
 .btn-icon-end {
-	border-left: 0.0625rem solid white;
+	border-left: 0.0625rem solid rgba(255,255,255,0.4);
     display: inline-block;
     margin: -.8rem 0 -.8rem 1rem;
     padding: 0.4375rem 0 0.4375rem 1rem;
@@ -624,6 +639,7 @@ button{
         min-width: 6.875rem;
         margin-right: 0.25rem;
         margin-bottom: 0.5rem;
+		overflow:hidden;
 
     }
 
@@ -682,9 +698,23 @@ button{
     &:active,
     &:focus,
     &:hover {
-        background  : lighten($light, 25%);
+        background  : lighten($light, 18%);
         color       : $dark;
-        border-color: lighten($light, 25%);
+        border-color: lighten($light, 18%);
+    }
+}
+.light.btn-light{
+	background  : lighten($light, 18%);
+    border-color: lighten($light, 18%);
+    color       : $dark;
+    
+    
+    &:active,
+    &:focus,
+    &:hover {
+        background  : $light;
+        color       : $dark;
+        border-color: $light;
     }
 }
 
@@ -700,19 +730,19 @@ button{
 }
 .btn-outline-light{
     color: $dark;
-	@at-root [data-theme-version="dark"] & {
-		color:$body-color;
-	}
+	// @at-root [data-theme-version="dark"] & {
+		// color:$body-color;
+	// }
 }
 .btn-outline-secondary{
-	@at-root [data-theme-version="dark"] & {
-		color:$body-color;
-	}
+	// @at-root [data-theme-version="dark"] & {
+		// color:$body-color;
+	// }
 }
 .btn-outline-dark{
-	@at-root [data-theme-version="dark"] & {
-		color:$body-color;
-	}
+	// @at-root [data-theme-version="dark"] & {
+		// color:$body-color;
+	// }
 }
 
 
@@ -1026,5 +1056,25 @@ button{
 	box-shadow:0 0 0 0.25rem var(--rgba-primary-5);
 }
 .btn-close:focus{
-	box-shadow:0 0 0 0.25rem var(--rgba-primary-5);
+	box-shadow: unset;
+}
+
+.btn-close{
+	background:none;
+	position:relative;
+	font-family: "Font Awesome 5 Free";
+	&:before{
+		content:'\f00d';
+		font-weight: 600;
+	}
+} 
+
+.btn{
+	&.btn-outline-success,
+	&.btn-outline-danger,
+	&.btn-outline-info{
+		&:hover{
+			color:$white;
+		}
+	}
 }

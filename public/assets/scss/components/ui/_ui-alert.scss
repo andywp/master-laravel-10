@@ -8,7 +8,7 @@
 	}
 }
 .alert-square{
-
+	border-radius:0!important;
 }
 
 .alert-rounded{
@@ -71,8 +71,8 @@
 }
 
 .alert-info{
-    background: lighten($info, 47%);
-    border-color: lighten($info, 47%);
+    background: lighten($info, 35%);
+    border-color: lighten($info, 35%);
     color: $info;
 	@at-root [data-theme-version="dark"] & {
 		background: $info-opacity;
@@ -81,8 +81,8 @@
 }
 
 .alert-dark{
-    background: lighten($dark, 75%);
-    border-color: lighten($dark, 75%);
+    background: lighten($dark, 55%);
+    border-color: lighten($dark, 55%);
     color: $dark;
 	@at-root [data-theme-version="dark"] & {
 		background: $dark-opacity;
@@ -91,9 +91,13 @@
 	}
 }
 .alert-light{
-    background: $light;
-    border-color: $light;
+    background: lighten($light, 15%);
+    border-color:  lighten($light, 15%);
     color: $dark;
+	@at-root [data-theme-version="dark"] & {
+		 background: rgba($light, 0.7);	
+		border-color:	rgba($light, 0.7);	
+	}
 	
 }
 

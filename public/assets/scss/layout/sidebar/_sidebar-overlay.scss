@@ -21,12 +21,12 @@
 		box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.2);
 		.metismenu{
 			& > li {
-				padding: 0 1.875rem;
+				padding: 0 0.5rem;
 				& > a {
 					font-size: 1rem;
-					padding: 1.25rem 1.25rem;
+					padding:1.125rem 2.1875rem;
 					color: #7f7184;
-					border-radius: 1rem;
+					border-radius: $radius;
 					-webkit-transition: all 0.5s;
 					-ms-transition: all 0.5s;
 					transition: all 0.5s;
@@ -131,4 +131,20 @@
     .nav-header {
         position: fixed;
     }
+}
+[data-container="wide-boxed"][data-sidebar-position="fixed"][data-sidebar-style="overlay"][data-layout="vertical"]{ 
+	.dlabnav {
+        position: fixed;
+		
+    }
+	.menu-toggle{
+		.dlabnav {
+			position: fixed;
+			z-index: 99999;
+			height: calc(100% - 90px);
+			left: calc(calc(100% - 1480px) / 2);
+			box-shadow: 20px 20px 20px 0 rgba(0, 0, 0, 0.1);
+		}
+	}	 
+		
 }
